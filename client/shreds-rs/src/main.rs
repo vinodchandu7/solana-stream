@@ -14,7 +14,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = ShredstreamClient::connect(&endpoint).await?;
 
     let request = ShredstreamClient::create_entries_request_for_accounts(
-        vec!["L1ocbjmuFUQDVwwUWi8HjXjg1RYEeN58qQx6iouAsGF".to_string()],
+        vec!["".to_string()],
         vec![],
         vec![],
         Some(CommitmentLevel::Processed),

@@ -77,7 +77,7 @@ const geyser = async () => {
       throw new Error('X_TOKEN environment variable is not set')
     }
     const endpoint =
-      process.env.GEYSER_ENDPOINT || 'https://shreds-ams.erpc.global'
+      process.env.GEYSER_ENDPOINT || 'https://grpc-ams.erpc.global'
     console.log('Connecting to', endpoint)
 
     // @ts-ignore ignore
