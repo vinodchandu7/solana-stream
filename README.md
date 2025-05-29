@@ -39,6 +39,14 @@ For the entire workspace:
 pnpm install
 ```
 
+### Geyser Client Example - TypeScript
+
+Set `client/geyser-ts/.env` with your X_TOKEN and other environment variables, then run:
+
+```bash
+pnpm -F client/geyser-ts dev
+```
+
 For specific packages, navigate to the package directory and install dependencies.
 
 ## Development
