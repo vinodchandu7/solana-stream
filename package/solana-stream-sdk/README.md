@@ -1,6 +1,28 @@
+<p align="center">
+  <a href="https://slv.dev/" target="_blank">
+    <img src="https://storage.validators.solutions/SolanaStreamSDK.jpg" alt="SolanaStreamSDK" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=ValidatorsDAO" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/ValidatorsDAO.svg?label=Follow%20@ValidatorsDAO" alt="Follow @ValidatorsDAO" />
+  </a>
+  <a aria-label="Downloads Number" href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
+    <img alt="" src="https://badgen.net/npm/dt/@validators-dao/solana-stream-sdk">
+  </a>
+  <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
+    <img alt="" src="https://badgen.net/badge/license/Apache/blue">
+  </a>
+  <a aria-label="Code of Conduct" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/CODE_OF_CONDUCT.md">
+    <img alt="" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
+  </a>
+</p>
+
 # @validators-dao/solana-stream-sdk
 
 Solana Stream SDK by Validators DAO - A TypeScript SDK for streaming Solana blockchain data.
+
+<a href="https://solana.com/">
+  <img src="https://storage.slv.dev/PoweredBySolana.svg" alt="Powered By Solana" width="200px" height="95px">
+</a>
 
 ## Installation
 
