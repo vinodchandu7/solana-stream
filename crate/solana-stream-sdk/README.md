@@ -5,8 +5,11 @@
   <a href="https://twitter.com/intent/follow?screen_name=ValidatorsDAO" target="_blank">
     <img src="https://img.shields.io/twitter/follow/ValidatorsDAO.svg?label=Follow%20@ValidatorsDAO" alt="Follow @ValidatorsDAO" />
   </a>
-  <a aria-label="Crates.io Downloads" href="https://crates.io/crates/solana-stream-sdk">
-    <img alt="" src="https://img.shields.io/crates/d/solana-stream-sdk">
+  <a href="https://crates.io/crates/solana-stream-sdk">
+    <img alt="Crate" src="https://img.shields.io/crates/v/solana-stream-sdk?label=solana-stream-sdk&color=fc8d62&logo=rust">
+  </a>
+  <a href="https://docs.rs/solana-stream-sdk">
+    <img alt="Docs.rs" src="https://img.shields.io/docsrs/solana-stream-sdk?color=8da0cb">
   </a>
   <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
