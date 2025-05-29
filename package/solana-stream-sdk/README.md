@@ -237,6 +237,14 @@ This package is part of the [Solana Stream](https://github.com/ValidatorsDAO/sol
 
 For issues and support, please visit our [Discord](https://discord.gg/ausnBvAM38).
 
+
 ## License
 
-MIT
+The package is available as open source under the terms of the
+[Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
+## Code of Conduct
+
+Everyone interacting in the Validators DAO project’s codebases, issue trackers, chat rooms
+and mailing lists is expected to follow the
+[code of conduct](https://github.com/ValidatorsDAO/solana-stream/blob/main/CODE_OF_CONDUCT.md).
