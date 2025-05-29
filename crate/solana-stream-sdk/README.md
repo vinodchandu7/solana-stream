@@ -8,8 +8,8 @@
   <a href="https://crates.io/crates/solana-stream-sdk">
     <img alt="Crate" src="https://img.shields.io/crates/v/solana-stream-sdk?label=solana-stream-sdk&color=fc8d62&logo=rust">
   </a>
-  <a href="https://docs.rs/solana-stream-sdk">
-    <img alt="Docs.rs" src="https://img.shields.io/docsrs/solana-stream-sdk?color=8da0cb">
+  <a href="https://crates.io/crates/solana-stream-sdk">
+    <img alt="Downloads" src="https://img.shields.io/crates/d/solana-stream-sdk?color=66c2a5">
   </a>
   <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
