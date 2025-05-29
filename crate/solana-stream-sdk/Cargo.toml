@@ -1,0 +1,22 @@
+[package]
+name = "solana-stream-sdk"
+version = "0.2.5"
+description = "Rust SDK for Solana streaming data using Jito protocols"
+authors = ["ELSOUL LABO B.V. <labo@elsoul.nl>"]
+homepage = "https://elsoul.nl/"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/ValidatorsDAO/solana-stream"
+keywords = ["solana", "blockchain", "streaming", "grpc", "jito"]
+categories = ["api-bindings", "network-programming"]
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "time"] }
+tonic = { version = "0.10", features = ["tls", "tls-roots", "tls-webpki-roots"] }
+thiserror = "1"
+prost = "0.12"
+prost-types = "0.12"
+
+[build-dependencies]
+protobuf-src = "1"
+tonic-build = "0.10"
