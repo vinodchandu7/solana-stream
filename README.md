@@ -9,7 +9,7 @@
     <img alt="Crate" src="https://img.shields.io/crates/v/solana-stream-sdk?label=solana-stream-sdk&color=fc8d62&logo=rust">
     </a>
   <a href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
-    <img alt="NPM Version" src="https://img.shields.io/npm/v/@validators-dao/solana-stream-sdk?color=268bd2&label=version">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/@validators-dao/solana-stream-sdk?color=268bd2&label=version&logo=npm">
   </a>
   <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
