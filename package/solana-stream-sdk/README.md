@@ -5,8 +5,11 @@
   <a href="https://twitter.com/intent/follow?screen_name=ValidatorsDAO" target="_blank">
     <img src="https://img.shields.io/twitter/follow/ValidatorsDAO.svg?label=Follow%20@ValidatorsDAO" alt="Follow @ValidatorsDAO" />
   </a>
-  <a aria-label="Downloads Number" href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
-    <img alt="" src="https://badgen.net/npm/dt/@validators-dao/solana-stream-sdk">
+  <a href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/@validators-dao/solana-stream-sdk?color=268bd2&label=version">
+  </a>
+  <a href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/@validators-dao/solana-stream-sdk?color=cb4b16&label=npm%20downloads">
   </a>
   <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
