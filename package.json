@@ -1,0 +1,26 @@
+{
+  "name": "solana-stream-sdk",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@triton-one/yellowstone-grpc": "4.0.2",
+    "@validators-dao/solana-stream-sdk": "workspace:*",
+    "bs58": "6.0.0",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "husky": "9.1.7",
+    "prettier": "3.5.3",
+    "tsx": "4.19.4",
+    "turbo": "2.5.3",
+    "typescript": "5.8.3"
+  }
+}

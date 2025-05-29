@@ -1,0 +1,41 @@
+{
+  "name": "@validators-dao/solana-stream-sdk",
+  "description": "Solana Stream SDK by Validators DAO",
+  "version": "0.2.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "engines": {
+    "pnpm": ">=10",
+    "npm": "please_use_pnpm_instead",
+    "node": "22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ValidatorsDAO/solana-stream.git"
+  },
+  "bugs": {
+    "url": "https://discord.gg/ausnBvAM38"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build",
+    "lint": "eslint --ext .ts,.js --fix .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@triton-one/yellowstone-grpc": "4.0.2",
+    "bs58": "6.0.0"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "typescript": "5.8.3"
+  }
+}

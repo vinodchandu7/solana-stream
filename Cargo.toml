@@ -1,0 +1,16 @@
+[package]
+name = "solana-stream"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+resolver = "3"
+
+[workspace.package]
+version = "0.2.5"
+description = ""
+authors = ["ELSOUL LABO B.V. <labo@elsoul.nl>"]
+homepage = "https://elsoul.nl/"
+edition = "2021"
+
+[dependencies]
