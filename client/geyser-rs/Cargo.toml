@@ -1,0 +1,18 @@
+[package]
+name = "geyser-rs"
+version = { workspace = true }
+description = "Rust client for Solana Geyser streaming"
+authors = { workspace = true }
+homepage = { workspace = true }
+edition = { workspace = true }
+publish = false
+
+[[bin]]
+name = "geyser-rs"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+tonic = { workspace = true }
+log = { workspace = true }
+thiserror = { workspace = true }

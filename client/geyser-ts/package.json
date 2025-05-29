@@ -29,6 +29,7 @@
     "update:packages": "pnpm update --latest"
   },
   "dependencies": {
+    "dotenv": "16.5.0",
     "@validators-dao/solana-stream-sdk": "workspace:*"
   }
 }

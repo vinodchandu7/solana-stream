@@ -47,6 +47,74 @@ Set `client/geyser-ts/.env` with your X_TOKEN and other environment variables, t
 pnpm -F client/geyser-ts dev
 ```
 
+### Shreds Client Example - Rust
+
+The Rust shreds client uses the published `solana-stream-sdk` crate for easy integration.
+
+#### Setup
+
+1. Set `client/shreds-rs/.env` with your endpoint:
+
+```env
+SHREDS_ENDPOINT=https://shreds-ams.erpc.global
+```
+
+2. Run the client:
+
+```bash
+cargo run --package shreds-rs
+```
+
+#### Usage with solana-stream-sdk
+
+You can also use the published crate in your own projects:
+
+```toml
+[dependencies]
+solana-stream-sdk = "0.2.5"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+dotenvy = "0.15"
+solana-entry = "2.2.1"
+bincode = "1.3.3"
+```
+
+```rust
+use solana_stream_sdk::{CommitmentLevel, ShredstreamClient};
+use std::env;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    // Load environment variables
+    dotenvy::dotenv().ok();
+
+    // Connect to shreds endpoint
+    let endpoint = env::var("SHREDS_ENDPOINT")
+        .unwrap_or_else(|_| "https://shreds-ams.erpc.global".to_string());
+    let mut client = ShredstreamClient::connect(&endpoint).await?;
+
+    // Create subscription for specific account
+    let request = ShredstreamClient::create_entries_request_for_account(
+        "L1ocbjmuFUQDVwwUWi8HjXjg1RYEeN58qQx6iouAsGF",
+        Some(CommitmentLevel::Processed),
+    );
+
+    // Subscribe to entries stream
+    let mut stream = client.subscribe_entries(request).await?;
+
+    // Process incoming entries
+    while let Some(entry) = stream.message().await? {
+        let entries = bincode::deserialize::<Vec<solana_entry::entry::Entry>>(&entry.entries)?;
+        println!("Slot: {}, Entries: {}", entry.slot, entries.len());
+
+        for entry in entries {
+            println!("  Entry has {} transactions", entry.transactions.len());
+        }
+    }
+
+    Ok(())
+}
+```
+
 For specific packages, navigate to the package directory and install dependencies.
 
 ## Development

@@ -42,3 +42,9 @@ node_modules/
 .dev.vars
 .wrangler
 .turbo
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
