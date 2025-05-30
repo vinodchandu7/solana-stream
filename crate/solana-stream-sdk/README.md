@@ -75,11 +75,11 @@ cargo build
 cargo run -p shreds-rs
 ```
 
-* The sample code can be found at:
+- The sample code can be found at:
 
 [https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs](https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs)
 
-* A 7-day free trial for Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
+- A 7-day free trial for Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
 
 [https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
 

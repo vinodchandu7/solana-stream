@@ -61,34 +61,51 @@ This project provides libraries and tools for streaming real-time data from the 
 For the entire workspace:
 
 ```bash
+git clone https://github.com/ValidatorsDAO/solana-stream.git
+cd solana-stream
 pnpm install
 ```
 
-### Geyser Client Example - TypeScript
+### Geyser Client Example – TypeScript
 
-Set `client/geyser-ts/.env` with your X_TOKEN and other environment variables, then run:
+Create a `.env` file at `client/geyser-ts/.env` with your environment variables:
 
-```bash
-pnpm -F client/geyser-ts dev
+```env
+X_TOKEN=YOUR_X_TOKEN
+GEYSER_ENDPOINT=https://grpc-ams.erpc.global
 ```
 
-### Shreds Client Example - Rust
+Next, build and run the client:
 
-The Rust shreds client uses the published `solana-stream-sdk` crate for easy integration.
+```bash
+pnpm -F @validators-dao/solana-stream-sdk build
+pnpm -F geyser-ts dev
+```
 
-#### Setup
+### Quick Start Guide for Sample Shreds Client
 
-1. Set `client/shreds-rs/.env` with your endpoint:
+Follow these steps to quickly run the sample client provided in this repository:
+
+**Create a `.env` file** (placed in the project root)
 
 ```env
 SHREDS_ENDPOINT=https://shreds-ams.erpc.global
 ```
 
-2. Run the client:
+**Build and run the sample client**
 
 ```bash
-cargo run --package shreds-rs
+cargo build
+cargo run -p shreds-rs
 ```
+
+- The sample code can be found at:
+
+[https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs](https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs)
+
+- A 7-day free trial for Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
+
+[https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
 
 #### Usage with solana-stream-sdk
 
