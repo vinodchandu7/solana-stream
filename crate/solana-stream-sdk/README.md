@@ -51,6 +51,38 @@ dotenvy = "0.15"  # Optional: for loading environment variables from .env files
 
 ## Usage
 
+### Quick Start Guide for Sample Shreds Client
+
+Follow these steps to quickly run the sample client provided in this repository:
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/ValidatorsDAO/solana-stream.git
+cd solana-stream
+```
+
+2. **Create a `.env` file** (placed in the project root)
+
+```env
+SHREDS_ENDPOINT=https://shreds-ams.erpc.global
+```
+
+3. **Build and run the sample client**
+
+```bash
+cargo build
+cargo run -p shreds-rs
+```
+
+* The sample code can be found at:
+
+[https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs](https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs)
+
+* A 7-day free trial for Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
+
+[https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
+
 ### Basic Example
 
 ```rust
