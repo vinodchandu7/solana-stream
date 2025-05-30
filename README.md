@@ -82,7 +82,11 @@ pnpm -F @validators-dao/solana-stream-sdk build
 pnpm -F geyser-ts dev
 ```
 
-### Quick Start Guide for Sample Shreds Client
+- A 7-day free trial for the Geyser gRPC endpoints is available by joining the Validators DAO Discord community. Please try it out:
+
+[https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
+
+### Quick Start Guide for Sample Shreds Client - Rust
 
 Follow these steps to quickly run the sample client provided in this repository:
 
@@ -103,7 +107,7 @@ cargo run -p shreds-rs
 
 [https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs](https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs)
 
-- A 7-day free trial for Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
+- A 7-day free trial for the Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out:
 
 [https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
 
