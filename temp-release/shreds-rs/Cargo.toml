@@ -1,0 +1,20 @@
+[package]
+name = "shreds-rs"
+version = "0.2.5"
+description = "Rust client for Solana shreds streaming"
+authors = ["ELSOUL LABO B.V. <labo@elsoul.nl>"]
+homepage = "https://elsoul.nl/"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/elsoul/solana-stream"
+
+[[bin]]
+name = "shreds-rs"
+path = "src/main.rs"
+
+[dependencies]
+bincode = "1.3.3"
+solana-stream-sdk = "0.2.5"
+solana-entry = "2.2.1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+dotenvy = "0.15"
