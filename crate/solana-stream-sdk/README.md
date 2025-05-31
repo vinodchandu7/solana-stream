@@ -68,6 +68,8 @@ cd solana-stream
 SHREDS_ENDPOINT=https://shreds-ams.erpc.global
 ```
 
+⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
+
 3. **Run the sample client**
 
 ```bash

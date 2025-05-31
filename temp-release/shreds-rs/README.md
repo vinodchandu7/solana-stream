@@ -33,6 +33,8 @@ Create a `.env` file with the following configuration:
 SHREDS_ENDPOINT=https://shreds-ams.erpc.global
 ```
 
+⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
+
 ## Usage
 
 The client will connect to the configured shreds endpoint and stream entries for the specified account.
