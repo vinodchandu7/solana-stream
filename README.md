@@ -75,6 +75,8 @@ X_TOKEN=YOUR_X_TOKEN
 GEYSER_ENDPOINT=https://grpc-ams.erpc.global
 ```
 
+⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
+
 Next, build and run the client:
 
 ```bash
@@ -93,6 +95,8 @@ pnpm -F geyser-ts dev
 ```env
 SHREDS_ENDPOINT=https://shreds-ams.erpc.global
 ```
+
+⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
 
 **Run the sample client**
 

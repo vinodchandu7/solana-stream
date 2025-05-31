@@ -45,6 +45,8 @@ X_TOKEN=your_token_here
 GEYSER_ENDPOINT=https://grpc-ams.erpc.global
 ```
 
+⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
+
 ## Usage
 
 The client will connect to the configured Yellowstone gRPC endpoint and stream Solana data.
